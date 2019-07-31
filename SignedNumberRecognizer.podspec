@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SignedNumberRecognizer'
   s.version          = '0.1.0'
-  s.summary          = 'It recognizes handwritten signed number using tensorflow.'
+  s.summary          = 'A library that recognizes handwritten signed integer.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,9 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-This library recognizes handwritten signed number using pre-built tensorflow model.
+  It takes CGPath as input, seperates them digit by digit, uses pre-built Tensorflowlite model to recognize each digits.
+  
+  It recognizes the minus sign by simply checking ratio of it's bounding box.
                        DESC
 
   s.homepage         = 'https://github.com/ingun37/SignedNumberRecognizer'

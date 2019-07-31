@@ -7,6 +7,12 @@
 
 ![alt-text](https://github.com/ingun37/SignedNumberRecognizer/blob/master/preview.gif)
 
+A library that recognizes handwritten signed integer.
+
+It takes CGPath as input, seperates them digit by digit, uses pre-built Tensorflowlite model to recognize each digits.
+
+It recognizes the minus sign by simply checking ratio of it's bounding box.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

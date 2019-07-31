@@ -1,0 +1,6 @@
+framework module SignedNumberRecognizer {
+  umbrella header "SignedNumberRecognizer-umbrella.h"
+
+  export *
+  module * { export * }
+}

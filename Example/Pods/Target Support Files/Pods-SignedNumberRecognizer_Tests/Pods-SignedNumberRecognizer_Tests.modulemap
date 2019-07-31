@@ -1,0 +1,6 @@
+framework module Pods_SignedNumberRecognizer_Tests {
+  umbrella header "Pods-SignedNumberRecognizer_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

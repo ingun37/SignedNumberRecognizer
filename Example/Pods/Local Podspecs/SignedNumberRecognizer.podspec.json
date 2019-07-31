@@ -1,0 +1,35 @@
+{
+  "name": "SignedNumberRecognizer",
+  "version": "0.1.0",
+  "summary": "It recognizes handwritten signed number using tensorflow.",
+  "description": "This library recognizes handwritten signed number using pre-built tensorflow model.",
+  "homepage": "https://github.com/ingun37/SignedNumberRecognizer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ingun37": "ingun37@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/ingun37/SignedNumberRecognizer.git",
+    "tag": "0.1.0"
+  },
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "12.4"
+  },
+  "source_files": "SignedNumberRecognizer/Classes/**/*",
+  "resource_bundles": {
+    "SignedNumberRecognizer": [
+      "SignedNumberRecognizer/Assets/*"
+    ]
+  },
+  "static_framework": true,
+  "dependencies": {
+    "TensorFlowLiteSwift": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

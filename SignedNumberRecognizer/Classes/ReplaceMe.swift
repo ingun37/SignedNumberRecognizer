@@ -378,6 +378,9 @@ public enum Sign:String {
     case P = ""
 }
 public func recognize(paths:[CGPath])->(Sign, [Result]) {
+    let paths = paths.sorted { (a, b) -> Bool in
+        return a.boundingBoxOfPath.midX < b.boundingBoxOfPath.midX
+    }
     guard let first = paths.first else {
         return (.P, [])
     }

@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/SignedNumberRecognizer.svg?style=flat)](https://cocoapods.org/pods/SignedNumberRecognizer)
 [![Platform](https://img.shields.io/cocoapods/p/SignedNumberRecognizer.svg?style=flat)](https://cocoapods.org/pods/SignedNumberRecognizer)
 
+![alt-text](https://github.com/ingun37/SignedNumberRecognizer/blob/master/preview.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

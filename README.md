@@ -13,6 +13,18 @@ It takes CGPath as input, seperates them digit by digit, uses pre-built Tensorfl
 
 It recognizes the minus sign by simply checking ratio of it's bounding box.
 
+## Usage
+
+You can simply call 
+
+```swift
+public func recognize(path:CGPath)->String
+```
+
+which returns it's most confident result in `String`.
+
+Parameter `path` is a `CGPath` that represents user's handwriting.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

@@ -10,8 +10,12 @@ PODS:
   - Nimble-Snapshots/Core (6.3.0):
     - FBSnapshotTestCase (~> 2.0)
     - Nimble (~> 7.0)
+  - PromisesObjC (1.2.8)
+  - PromisesSwift (1.2.8):
+    - PromisesObjC (= 1.2.8)
   - Quick (1.2.0)
   - SignedNumberRecognizer (0.1.0):
+    - PromisesSwift
     - TensorFlowLiteSwift
   - TensorFlowLiteC (0.2.0)
   - TensorFlowLiteSwift (0.2.0):
@@ -29,6 +33,8 @@ SPEC REPOS:
     - FBSnapshotTestCase
     - Nimble
     - Nimble-Snapshots
+    - PromisesObjC
+    - PromisesSwift
     - Quick
     - TensorFlowLiteC
     - TensorFlowLiteSwift
@@ -41,8 +47,10 @@ SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
+  PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  PromisesSwift: 37bad6f4daddb02f7c9c531efe91e8b21c13ee2f
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  SignedNumberRecognizer: 5eb42d4ff733923bee63398dba7e0eda224bfd03
+  SignedNumberRecognizer: a0e29b86fe540a7e382134c6ac98a9481d73b336
   TensorFlowLiteC: c90ae90f5d8194e3c66518e576f53cf4c1e7f42b
   TensorFlowLiteSwift: 2499b9629744d0962de7340b53746d1f46f59096
 

@@ -10,6 +10,7 @@
 import Foundation
 import UIKit
 import TensorFlowLite
+import Promises
 
 public func CGPath2SquareImage(path:CGPath, toSize:CGFloat)-> UIImage? {
     let bbox = path.boundingBoxOfPath
@@ -400,4 +401,15 @@ public func mostLikely(sign:Sign, results:[Result])-> String {
 public func recognize(path:CGPath)->String {
     let r = recognize(paths: seperate(path: path))
     return mostLikely(sign: r.0, results: r.1)
+}
+
+public func recognizeAsync(path:CGPath)-> Promise<String> {
+    let pend = Promise<String>.pending()
+    DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
+        let r = recognize(paths: seperate(path: path))
+        DispatchQueue.main.async {
+            pend.fulfill(mostLikely(sign: r.0, results: r.1))
+        }
+    }
+    return pend
 }

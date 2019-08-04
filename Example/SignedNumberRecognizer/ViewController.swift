@@ -1,10 +1,40 @@
 import UIKit
 import SignedNumberRecognizer
 
-protocol TestController {
+protocol PadDelegate {
     func process(path:CGPath)
 }
-class ViewController: UIViewController, TestController {
+class ViewController: UIViewController {
+    
+}
+
+class AsyncTestView:UIStackView, PadDelegate {
+    @IBOutlet weak var padView:PadView!
+    @IBOutlet weak var lbl:UILabel!
+    @IBOutlet weak var act:UIActivityIndicatorView!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        padView.del = self
+        act.isHidden = true
+    }
+    
+    func process(path: CGPath) {
+        act.isHidden = false
+        recognizeAsync(path: path).then { (str) in
+            self.lbl.text = str
+            self.act.isHidden = true
+        }
+    }
+}
+
+class SyncTestView:UIStackView, PadDelegate {
+    @IBOutlet weak var padView:PadView!
+    @IBOutlet weak var lblStack:UIStackView!
+    @IBOutlet weak var hstack:UIStackView!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        padView.del = self
+    }
     func emptyStack(stk:UIStackView) {
         for l in stk.arrangedSubviews {
             stk.removeArrangedSubview(l)
@@ -31,25 +61,10 @@ class ViewController: UIViewController, TestController {
             lblStack.addArrangedSubview(l)
         }
     }
-    
-    @IBOutlet weak var padView:PadView!
-    @IBOutlet weak var lblStack:UIStackView!
-    @IBOutlet weak var hstack:UIStackView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        padView.del = self
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 }
 
 class PadView: UIView {
-    var del:TestController?
+    var del:PadDelegate?
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         guard !drawing.isEmpty else {

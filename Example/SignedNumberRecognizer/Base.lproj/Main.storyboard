@@ -21,43 +21,113 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bNs-Pp-fP2">
-                                <rect key="frame" x="123.5" y="255.5" width="128" height="356"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sqm-90-XZO" userLabel="Dividr">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XmP-KJ-eCJ" customClass="PadView" customModule="SignedNumberRecognizer_Example" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bO-Fd-gtM">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="647"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bNs-Pp-fP2" customClass="SyncTestView" customModule="SignedNumberRecognizer_Example" customModuleProvider="target">
+                                                <rect key="frame" x="22" y="246.5" width="128" height="154"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sync test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7v-Kl-fu5">
+                                                        <rect key="frame" x="23.5" y="0.0" width="81" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XmP-KJ-eCJ" customClass="PadView" customModule="SignedNumberRecognizer_Example" customModuleProvider="target">
+                                                        <rect key="frame" x="29" y="24" width="70" height="70"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="JHy-ag-u6m"/>
+                                                            <constraint firstAttribute="height" constant="70" id="idm-Iq-MG1"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bVI-0I-eeK">
+                                                        <rect key="frame" x="0.0" y="94" width="128" height="28"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="28" id="Yt2-Ne-xjA"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PSY-FE-1Rj">
+                                                        <rect key="frame" x="0.0" y="122" width="128" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" placeholder="YES" id="yHI-zH-Sj9"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <connections>
+                                                    <outlet property="hstack" destination="bVI-0I-eeK" id="5bS-s6-a63"/>
+                                                    <outlet property="lblStack" destination="PSY-FE-1Rj" id="VTy-wJ-a5S"/>
+                                                    <outlet property="padView" destination="XmP-KJ-eCJ" id="jRa-1f-6af"/>
+                                                </connections>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.57276212969999996" green="0.77914641289999997" blue="0.95034898479999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="JHy-ag-u6m"/>
-                                            <constraint firstAttribute="height" constant="128" id="idm-Iq-MG1"/>
+                                            <constraint firstItem="bNs-Pp-fP2" firstAttribute="centerX" secondItem="0bO-Fd-gtM" secondAttribute="centerX" id="X2X-Dn-azC"/>
+                                            <constraint firstItem="bNs-Pp-fP2" firstAttribute="centerY" secondItem="0bO-Fd-gtM" secondAttribute="centerY" id="eNE-gz-CIs"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bVI-0I-eeK">
-                                        <rect key="frame" x="0.0" y="128" width="128" height="28"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmF-5D-Ubm">
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="647"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3uh-wg-sFR" customClass="AsyncTestView" customModule="SignedNumberRecognizer_Example" customModuleProvider="target">
+                                                <rect key="frame" x="40" y="256.5" width="91.5" height="134.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Async test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p28-ui-FDa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0i0-OB-P0s" customClass="PadView" customModule="SignedNumberRecognizer_Example" customModuleProvider="target">
+                                                        <rect key="frame" x="11" y="24" width="70" height="70"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="aq4-XK-AN6"/>
+                                                            <constraint firstAttribute="width" constant="70" id="ze3-WF-ri6"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuF-TM-kwq">
+                                                        <rect key="frame" x="25" y="94" width="42" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6rR-8j-nUL">
+                                                        <rect key="frame" x="36" y="114.5" width="20" height="20"/>
+                                                    </activityIndicatorView>
+                                                </subviews>
+                                                <connections>
+                                                    <outlet property="act" destination="6rR-8j-nUL" id="EUK-p1-amH"/>
+                                                    <outlet property="lbl" destination="tuF-TM-kwq" id="uhK-5v-6gn"/>
+                                                    <outlet property="padView" destination="0i0-OB-P0s" id="5qP-gb-u8C"/>
+                                                </connections>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.89411764709999997" green="0.3921568627" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="28" id="Yt2-Ne-xjA"/>
+                                            <constraint firstItem="3uh-wg-sFR" firstAttribute="centerX" secondItem="YmF-5D-Ubm" secondAttribute="centerX" id="MCj-4R-vaq"/>
+                                            <constraint firstItem="3uh-wg-sFR" firstAttribute="centerY" secondItem="YmF-5D-Ubm" secondAttribute="centerY" id="UKE-kx-QHm"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PSY-FE-1Rj">
-                                        <rect key="frame" x="0.0" y="156" width="128" height="200"/>
-                                    </stackView>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bNs-Pp-fP2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="TsS-VN-6ZM"/>
-                            <constraint firstItem="bNs-Pp-fP2" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="U41-qh-3k5"/>
+                            <constraint firstItem="sqm-90-XZO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Yan-s1-4eH"/>
+                            <constraint firstItem="sqm-90-XZO" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="joc-UI-dsh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sqm-90-XZO" secondAttribute="bottom" id="lWK-wD-dvS"/>
+                            <constraint firstItem="sqm-90-XZO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="pSV-mC-t5z"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="hstack" destination="bVI-0I-eeK" id="Ttw-QP-Tz2"/>
-                        <outlet property="lblStack" destination="PSY-FE-1Rj" id="yjY-fp-Wm4"/>
-                        <outlet property="padView" destination="XmP-KJ-eCJ" id="ni1-1P-yiI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>

@@ -1,8 +1,8 @@
 {
   "name": "SignedNumberRecognizer",
   "version": "0.1.0",
-  "summary": "It recognizes handwritten signed number using tensorflow.",
-  "description": "This library recognizes handwritten signed number using pre-built tensorflow model.",
+  "summary": "A library that recognizes handwritten signed integer.",
+  "description": "It takes CGPath as input, seperates them digit by digit, uses pre-built Tensorflowlite model to recognize each digits.\n\nIt recognizes the minus sign by simply checking ratio of it's bounding box.",
   "homepage": "https://github.com/ingun37/SignedNumberRecognizer",
   "license": {
     "type": "MIT",
@@ -28,6 +28,9 @@
   "static_framework": true,
   "dependencies": {
     "TensorFlowLiteSwift": [
+
+    ],
+    "PromisesSwift": [
 
     ]
   },

@@ -29,6 +29,8 @@ Parameter `path` is a `CGPath` that represents user's handwriting.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+You will have best experience with Apple Pencil on iPad.
+
 ## Requirements
 
 ## Installation
